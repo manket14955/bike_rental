@@ -35,11 +35,10 @@ class Home extends Component {
   render() {
     return (
       <div>
-      
-        // should have a NavBar component
-        // should have a DatePicker component which is used to select the start and end dates
-        // should have a button for searching the bikes based on the dates entered 
-        
+      <NavBar/>
+      <DatePicker onSelect={this.handleChangeStart}>Start date</DatePicker>
+      <DatePicker onSelect={this.handleChangeEnd}>End Date</DatePicker>
+      <button onClick={this.handleClick}></button>
       </div>
 
     );
@@ -47,3 +46,9 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+
+        // should have a NavBar component
+        // should have a DatePicker component which is used to select the start and end dates
+        // should have a button for searching the bikes based on the dates entered

@@ -28,11 +28,13 @@ class SignInForm extends Component {
   }
 
   handleSubmit(e) {
+  e.preventDefault();
+  let email = this.props.location.detail.email
+  let password = this.props.location.detail.password
+  if(this.state.email===email && this.state.password===pwd)
+  this.props.history.push('/home')
+}
 
-    // should be taken to home page upon login
-    }
-
-  }
   canBeSubmitted() {
     const { email, password } = this.state;
     return email.length > 0 && password.length > 6;
@@ -50,9 +52,15 @@ class SignInForm extends Component {
         </div>
 
         <form onSubmit={this.handleSubmit} className="FormFields">
-          
-        //it should have fields like first email, password and submit button
-        
+        <div><label>First name</label>
+        <input type='text' name ='fname'></input><br/></div>
+       <div><label>Email</label>
+        <input type='text' name ='email' onChange={this.handleChange}></input><br/></div>
+        <div className='pwd'><label>Password</label>
+        <input type='text' name ='password' onChange={this.handleChange}></input><br/></div>
+        <div><label>Submit</label>
+        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
+
         </form>
       </div>
 

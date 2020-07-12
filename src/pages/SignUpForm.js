@@ -35,10 +35,14 @@ class SignUpForm extends Component {
   }
 
   handleSubmit(e) {
-      
-    // should be taken to sign-in page after register
-
-    }
+   e.preventDefault();
+   this.props.history.push({
+     pathname:'/sign-in',
+     details :{
+       email:this.state.email,
+       pwd:this.state.password
+     }
+   })
   }
   canBeSubmitted() {
     const { email, password, fname, lname, hasAgreed } = this.state;
@@ -56,10 +60,17 @@ class SignUpForm extends Component {
         </div>
 
         <form onSubmit={this.handleSubmit} className="FormFields">
-          
-        //it should have fields like first name, last name, email, password, checkbox for terms and conditions, submit button
-        
-          </div>
+        <div><label>First name</label>
+        <input type='text' id ='fname' onChange={this.handleChange}></input><br/></div>
+        <div><label>Last Name</label>
+        <input type='text' id ='lname' onChange={this.handleChange}></input><br/></div>
+        <div><label>Email</label>
+        <input type='text' id ='email' onChange={this.handleChange}></input><br/></div>
+        <div className='pwd'><label>Password</label>
+        <input type='text' id ='password' onChange={this.handleChange}></input><br/></div>
+        <span className='FormField__Checkbox'>Terms and Conditions</span>
+        <button type='checkbox' id ='hasAgreed' onChange={this.handleChange}></button><br/>
+        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/>
         </form>
       </div>
     );
@@ -67,3 +78,6 @@ class SignUpForm extends Component {
 }
 
 export default SignUpForm;
+
+
+//it should have fields like first name, last name, email, password, checkbox for terms and conditions, submit button
