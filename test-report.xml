@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="/projects/challenge/src/tests/SignUpForm.test.js" errors="0" package="/projects/challenge/src/tests/SignUpForm.test.js" hostname="localhost" tests="12" failures="1" time="2.443" timestamp="2020-07-12T18:55:07">
+  <testsuite id="0" name="/projects/challenge/src/tests/SignUpForm.test.js" errors="0" package="/projects/challenge/src/tests/SignUpForm.test.js" hostname="localhost" tests="12" failures="0" time="2.383" timestamp="2020-07-12T19:03:34">
     <properties>
     </properties>
     <testcase classname="renders without crashing" name="renders without crashing" time="0">
@@ -22,20 +22,6 @@
     <testcase classname="SignUpForm" name="renders a email input" time="0">
     </testcase>
     <testcase classname="SignUpForm" name="renders a password input" time="0">
-      <failure message="Error: expect(received).toEqual(expected)
-
-Expected value to equal:
-  1
-Received:
-  0
-    at Object.it (/projects/challenge/src/tests/SignUpForm.test.js:52:184)
-    at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
-    at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
-    at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
-    at &lt;anonymous&gt;" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="SignUpForm" name="renders a checkbox input" time="0">
     </testcase>
@@ -44,7 +30,7 @@ Received:
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="1" name="/projects/challenge/src/tests/SignInForm.test.js" errors="0" package="/projects/challenge/src/tests/SignInForm.test.js" hostname="localhost" tests="10" failures="4" time="0.373" timestamp="2020-07-12T18:55:10">
+  <testsuite id="1" name="/projects/challenge/src/tests/SignInForm.test.js" errors="0" package="/projects/challenge/src/tests/SignInForm.test.js" hostname="localhost" tests="10" failures="4" time="0.409" timestamp="2020-07-12T19:03:36">
     <properties>
     </properties>
     <testcase classname="renders without crashing" name="renders without crashing" time="0">
@@ -120,7 +106,26 @@ Received:
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="2" name="/projects/challenge/src/tests/Checkout.test.js" errors="0" package="/projects/challenge/src/tests/Checkout.test.js" hostname="localhost" tests="1" failures="1" time="0.289" timestamp="2020-07-12T18:55:10">
+  <testsuite id="2" name="/projects/challenge/src/tests/NavBar.test.js" errors="0" package="/projects/challenge/src/tests/NavBar.test.js" hostname="localhost" tests="1" failures="1" time="0.312" timestamp="2020-07-12T19:03:37">
+    <properties>
+    </properties>
+    <testcase classname="testing NavBar component" name="checking the NavBar NavLink router content" time="0">
+      <failure message="Error: Method “props” is meant to be run on 1 node. 0 found instead.
+    at ShallowWrapper.single (/projects/challenge/node_modules/enzyme/build/ShallowWrapper.js:2183:17)
+    at ShallowWrapper.props (/projects/challenge/node_modules/enzyme/build/ShallowWrapper.js:1420:21)
+    at Object.test (/projects/challenge/src/tests/NavBar.test.js:22:19)
+    at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;" type="AssertionError">
+      </failure>
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="3" name="/projects/challenge/src/tests/Checkout.test.js" errors="0" package="/projects/challenge/src/tests/Checkout.test.js" hostname="localhost" tests="1" failures="1" time="0.307" timestamp="2020-07-12T19:03:37">
     <properties>
     </properties>
     <testcase classname="testing Checkout component" name="checking Checkout content" time="0">
@@ -145,26 +150,7 @@ Received:
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="3" name="/projects/challenge/src/tests/NavBar.test.js" errors="0" package="/projects/challenge/src/tests/NavBar.test.js" hostname="localhost" tests="1" failures="1" time="0.324" timestamp="2020-07-12T18:55:11">
-    <properties>
-    </properties>
-    <testcase classname="testing NavBar component" name="checking the NavBar NavLink router content" time="0">
-      <failure message="Error: Method “props” is meant to be run on 1 node. 0 found instead.
-    at ShallowWrapper.single (/projects/challenge/node_modules/enzyme/build/ShallowWrapper.js:2183:17)
-    at ShallowWrapper.props (/projects/challenge/node_modules/enzyme/build/ShallowWrapper.js:1420:21)
-    at Object.test (/projects/challenge/src/tests/NavBar.test.js:22:19)
-    at Object.asyncFn (/projects/challenge/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
-    at resolve (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/projects/challenge/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
-    at Promise.resolve.then.el (/projects/challenge/node_modules/p-map/index.js:46:16)
-    at &lt;anonymous&gt;" type="AssertionError">
-      </failure>
-    </testcase>
-    <system-out/>
-    <system-err/>
-  </testsuite>
-  <testsuite id="4" name="/projects/challenge/src/tests/home2.test.js" errors="0" package="/projects/challenge/src/tests/home2.test.js" hostname="localhost" tests="1" failures="0" time="0.338" timestamp="2020-07-12T18:55:11">
+  <testsuite id="4" name="/projects/challenge/src/tests/home2.test.js" errors="0" package="/projects/challenge/src/tests/home2.test.js" hostname="localhost" tests="1" failures="0" time="0.314" timestamp="2020-07-12T19:03:37">
     <properties>
     </properties>
     <testcase classname="testing Home component" name="checking home content" time="0">
@@ -172,7 +158,7 @@ Received:
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="5" name="/projects/challenge/src/tests/MainArea.test.js" errors="0" package="/projects/challenge/src/tests/MainArea.test.js" hostname="localhost" tests="1" failures="0" time="0.293" timestamp="2020-07-12T18:55:11">
+  <testsuite id="5" name="/projects/challenge/src/tests/MainArea.test.js" errors="0" package="/projects/challenge/src/tests/MainArea.test.js" hostname="localhost" tests="1" failures="0" time="0.296" timestamp="2020-07-12T19:03:37">
     <properties>
     </properties>
     <testcase classname="testing  MainArea" name="checking MainArea content" time="0">
@@ -180,7 +166,7 @@ Received:
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="6" name="/projects/challenge/src/App.test.js" errors="0" package="/projects/challenge/src/App.test.js" hostname="localhost" tests="1" failures="0" time="0.152" timestamp="2020-07-12T18:55:12">
+  <testsuite id="6" name="/projects/challenge/src/App.test.js" errors="0" package="/projects/challenge/src/App.test.js" hostname="localhost" tests="1" failures="0" time="0.156" timestamp="2020-07-12T19:03:38">
     <properties>
     </properties>
     <testcase classname="renders without crashing" name="renders without crashing" time="0">
