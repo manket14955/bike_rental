@@ -52,14 +52,11 @@ class SignInForm extends Component {
         </div>
 
         <form onSubmit={this.handleSubmit} className="FormFields">
-        <div><label>First name</label>
-        <input type='text' name ='fname'></input><br/></div>
        <div><label>Email</label>
         <input type='text' name ='email' onChange={this.handleChange}></input><br/></div>
         <div className='pwd'><label>Password</label>
         <input type='text' name ='password' onChange={this.handleChange}></input><br/></div>
-        <div><label>Submit</label>
-        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
+        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/>
 
         </form>
       </div>

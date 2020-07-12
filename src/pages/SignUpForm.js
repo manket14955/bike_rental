@@ -68,9 +68,10 @@ class SignUpForm extends Component {
         <input type='text' id ='email' onChange={this.handleChange}></input><br/></div>
         <div className='pwd'><label>Password</label>
         <input type='text' id ='password' onChange={this.handleChange}></input><br/></div>
-        <span className='FormField__Checkbox'>Terms and Conditions</span>
-        <button type='checkbox' id ='hasAgreed' onChange={this.handleChange}></button><br/>
-        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/>
+        <div className='FormField__Checkbox'>
+        <label>Terms and Conditions</label></div>
+        <input type='checkbox' id ='hasAgreed' onChange={this.handleChange}></input><br/>
+        <div><button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
         </form>
       </div>
     );
