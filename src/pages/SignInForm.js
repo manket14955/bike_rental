@@ -30,7 +30,7 @@ class SignInForm extends Component {
   handleSubmit(e) {
   e.preventDefault();
   let email = this.props.location.detail.email
-  let pwd = this.props.location.detail.password
+  let pwd = this.props.location.detail.pwd
   if(this.state.email===email && this.state.password===pwd){
   this.props.history.push('/home') }
 }

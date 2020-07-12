@@ -38,15 +38,15 @@ class SignUpForm extends Component {
    e.preventDefault();
    this.props.history.push({
      pathname:'/sign-in',
-     details :{
+     detail :{
        email:this.state.email,
        pwd:this.state.pwd
      }
    })
   }
   canBeSubmitted() {
-    const { email, password, fname, lname, hasAgreed } = this.state;
-    return email.length > 0 && password.length > 6 && fname.length > 0 && lname.length && hasAgreed === true;
+    const { email, pwd, fname, lname, hasAgreed } = this.state;
+    return email.length > 0 && pwd.length > 6 && fname.length > 0 && lname.length && hasAgreed === true;
   }
 
   render() {
