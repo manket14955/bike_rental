@@ -30,9 +30,9 @@ class SignInForm extends Component {
   handleSubmit(e) {
   e.preventDefault();
   let email = this.props.location.detail.email
-  let password = this.props.location.detail.password
-  if(this.state.email===email && this.state.password===pwd)
-  this.props.history.push('/home')
+  let pwd = this.props.location.detail.password
+  if(this.state.email===email && this.state.password===pwd){
+  this.props.history.push('/home') }
 }
 
   canBeSubmitted() {
@@ -55,8 +55,9 @@ class SignInForm extends Component {
        <div><label>Email</label>
         <input type='text' name ='email' onChange={this.handleChange}></input><br/></div>
         <div className='pwd'><label>Password</label>
-        <input type='text' name ='password' onChange={this.handleChange}></input><br/></div>
-        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/>
+        <input type='password' name ='password' onChange={this.handleChange}></input><br/></div>
+        <div>
+        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
 
         </form>
       </div>
