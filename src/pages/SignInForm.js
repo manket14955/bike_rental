@@ -57,7 +57,7 @@ class SignInForm extends Component {
         <div className='pwd'><label>Password</label>
         <input type='password' name ='password' onChange={this.handleChange}></input><br/></div>
         <div>
-        <button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
+        <button disabled ={!isEnabled} type='submit'></button><br/></div>
 
         </form>
       </div>

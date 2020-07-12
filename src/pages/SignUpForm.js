@@ -8,7 +8,7 @@ class SignUpForm extends Component {
 
     this.state = {
       email: '',
-      password: '',
+      pwd: '',
       fname: '',
       lname: '',
       hasAgreed: false,
@@ -40,7 +40,7 @@ class SignUpForm extends Component {
      pathname:'/sign-in',
      details :{
        email:this.state.email,
-       pwd:this.state.password
+       pwd:this.state.pwd
      }
    })
   }
@@ -67,11 +67,11 @@ class SignUpForm extends Component {
         <div><label>Email</label>
         <input type='text' id ='email' onChange={this.handleChange}></input><br/></div>
         <div className='pwd'><label>Password</label>
-        <input type='password' id ='password' onChange={this.handleChange}></input><br/></div>
+        <input type='password' id ='pwd' onChange={this.handleChange}></input><br/></div>
         <div className='FormField__Checkbox'>
         <label>Terms and Conditions</label></div>
         <input type='checkbox' id ='hasAgreed' onChange={this.handleChange}></input><br/>
-        <div><button disabled ={!isEnabled} onClick={this.handleSubmit}></button><br/></div>
+        <div><button disabled ={!isEnabled} type='submit'></button><br/></div>
         </form>
       </div>
     );
