@@ -36,8 +36,10 @@ class Home extends Component {
     return (
       <div>
       <NavBar/>
-      <DatePicker onSelect={this.handleChangeStart}>Start date</DatePicker>
-      <DatePicker onSelect={this.handleChangeEnd}>End Date</DatePicker>
+      <DatePicker selected={this.state.startDate} onSelect={this.handleChangeStart}
+      name ='startDate' dateFormat='MM/dd/yyyy'/> 
+      <DatePicker selected={this.state.endDate} onSelect={this.handleChangeEnd}
+      name='endDate' dateFormat='MM/dd/yyyy'/>
       <button onClick={this.handleClick}></button>
       </div>
 

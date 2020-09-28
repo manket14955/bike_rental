@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './NavBar.jsx';
+import queryString from 'query-string';
 
 class Checkout extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.bikes);
+    console.log(this.props)
+    // console.log(this.props.bikes);
+    let bike = this.props.location.bike;
+    console.log(bike.name)
     this.state = {
 
     };
@@ -16,7 +20,10 @@ class Checkout extends Component {
   }
 
   confirmClick() {
-    this.props.history.push("/myBookings");
+    this.props.history.push(
+      {pathname :"/myBookings",
+      bike:this.props.location.bike}
+      );
   }
 
   goBackClick() {
@@ -25,17 +32,18 @@ class Checkout extends Component {
 
   render() {
     let btnstyle = "10px 0%";
+    let bike = this.props.location.bike;
     return (
       <div>
       <NavBar/>
          <Card className="Card">
-          <CardImg top width="100%" src={this.props.bikes.image} alt="Card image cap" />
+          <CardImg top width="100%" src={bike.image} alt="Card image cap" />
           <CardBody>
-            <CardTitle>{this.props.bikes.name}</CardTitle>
-            <CardSubtitle>{this.props.bikes.model}</CardSubtitle>
-            <CardText>{this.props.bikes.description}</CardText>
-            <Button onClick={this.confirmClick}>Confirm</Button>
-            <Button onClick={this.goBackClick}>Go back</Button>
+            <CardTitle>{bike.name}</CardTitle>
+            <CardSubtitle>{bike.model}</CardSubtitle>
+            <CardText>{bike.description}</CardText>
+            <Button size={btnstyle} onClick={this.confirmClick}>Confirm</Button>
+            <Button size={btnstyle} onClick={this.goBackClick}>Go back</Button>
 
           </CardBody>
         </Card>

@@ -12,7 +12,11 @@ class BikesCard extends Component {
   }
   handleClick() {
     console.log(this.props.bikes)
-    this.props.propdata.history.push(`/Checkout`)
+    // this.props.propdata.history.push(`/Checkout/bike?${this.props.bikes}`)
+    this.props.propdata.history.push(
+     { pathname : '/Checkout',
+      bike : this.props.bikes }
+    )
   }
 
   render() {

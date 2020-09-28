@@ -7,8 +7,13 @@ class MyBookings extends Component {
   constructor(props) {
     super(props);
     this.unbook = this.unbook.bind(this);
+    let bikeprops = this.props.location.bike
+    
     this.state = {
-
+      image : bikeprops.image,
+      name : bikeprops.name,
+      model : bikeprops.model,
+      description : bikeprops.description
     }
   }
 

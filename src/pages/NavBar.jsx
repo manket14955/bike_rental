@@ -21,10 +21,22 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        
-        // should have a Navbar brand, toggler and the NavItem (logout) should be linked to sign-in page
+        <Navbar bg='light'>
+          <NavbarBrand> Bike Rentals </NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar}/>
+          <Collapse isOpen={this.state.collapsed}>
+            <Nav className ='out' navbar>
+            <NavItem>
+              <NavLink to='/sign-in'>Sign-in</NavLink>
+            </NavItem>
+            </Nav>
+          </Collapse>         
+        </Navbar>
         
       </div>
     );
   }
 }
+
+
+// should have a Navbar brand, toggler and the NavItem (logout) should be linked to sign-in page
